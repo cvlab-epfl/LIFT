@@ -30,6 +30,24 @@ export _LIFT_BASE_PATH="$(pwd)"
 
 _LIFT_PYTHON_CODE_PATH="${_LIFT_BASE_PATH}/python-code"
 
+_LIFT_C_CODE_PATH="${_LIFT_BASE_PATH}/c-code"
+
+# Check if cmake is installed
+_CMAKE_PATH=`which cmake`
+if [ ! -f "${_CMAKE_PATH}" ]
+then
+    echo "CMAKE is not installed!"
+    exit 
+fi
+
+# Make sure libSIFT is compiled
+if [ ! -f "${_LIFT_C_CODE_PATH}/libSIFT.so" ]
+then
+    (cd "${_LIFT_C_CODE_PATH}/build"; \
+     cmake .. && make
+    )
+fi
+
 # Test image and model settings
 _LIFT_TEST_IMG_NAME="img1"
 _LIFT_TEST_IMG="${_LIFT_BASE_PATH}/data/testimg/${_LIFT_TEST_IMG_NAME}.jpg"
