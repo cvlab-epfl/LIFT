@@ -93,7 +93,7 @@ def createXYZMapLayer(scoremap_cut_layer,
     num_scale = len(fScaleList)
     # scale_space_min changes according to scoremap_shape
     num_scale_after = scoremap_shape[4]
-    new_min_idx = (num_scale - num_scale_after) / 2
+    new_min_idx = (num_scale - num_scale_after) // 2
     scale_space_min = fScaleList[new_min_idx]
 
     if num_scale >= 2:
