@@ -53,5 +53,5 @@ To run the test program simply
 
 ## Note
 
-This model was trained with SfM data, which does not have strong rotation changes. Newer models work better in this case, which will be released soon. In the meantime, you can also use the models in the [learn-orientation](http://github.com/cvlab-epfl/learn-orientation), [benchmark-orientation](http://github.com/cvlab-epfl/benchmark-orientation).
+This model was trained with SfM data (Piccadilly Circus dataset), which does not have strong rotation changes. Newer models work better in this case, which will be released soon. In the meantime, you can also use the models in the [learn-orientation](http://github.com/cvlab-epfl/learn-orientation), [benchmark-orientation](http://github.com/cvlab-epfl/benchmark-orientation).
 
